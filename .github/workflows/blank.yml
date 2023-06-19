@@ -1,0 +1,29 @@
+name: Update Mail File
+
+on:
+  schedule:
+    - cron: "*/3 * * * *"
+
+jobs:
+  update-mail:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Update Mail File
+        run: |
+          wget -O mail.txt https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess
+          
+      - name: Commit Changes
+        run: |
+          git config --global user.name "mmd"
+          git config --global user.email "mmdhelper@example.com"
+          git add mail.txt
+          git commit -m "Update mail.txt"
+          
+      - name: Push Changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
