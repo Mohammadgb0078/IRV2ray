@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Update Mail File
         run: |
-          curl -o mail.txt -LJO "https://example.com/new_file.txt"  # لینک RAW فایل جدید را اینجا قرار دهید
+          curl -o mail.txt -LJO "https://github.com/yebekhe/TelegramV2rayCollector/raw/main/sub/vmess"  # لینک RAW فایل جدید را اینجا قرار دهید
           
       - name: Commit Changes
         run: |
