@@ -9,9 +9,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
       - name: Update Mail File
         run: |
-          curl -o mail.txt -LJO "https://github.com/yebekhe/TelegramV2rayCollector/raw/main/sub/vmess"  # لینک RAW فایل جدید را اینجا قرار دهید
+          wget -O mail.txt https://github.com/yebekhe/TelegramV2rayCollector/raw/main/sub/vmess
           
       - name: Commit Changes
         run: |
