@@ -1,3 +1,4 @@
+
 name: Update Mail File
 
 on:
@@ -9,21 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
       - name: Update Mail File
         run: |
-          wget -O mail.txt https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess
+          curl -o mail.txt -LJO "https://example.com/new_file.txt"  # لینک RAW فایل جدید را اینجا قرار دهید
           
       - name: Commit Changes
         run: |
-          git config --global user.name "mmd"
-          git config --global user.email "mmdhelper@example.com"
+          git config --global user.name "Your Name"
+          git config --global user.email "youremail@example.com"
           git add mail.txt
           git commit -m "Update mail.txt"
           
       - name: Push Changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
