@@ -6,13 +6,13 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: "*/1 * * * *" # Every 3 Minutes
+    - cron: "0 * * * *" # Every Hourly
 
-  workflow_dispatch:
+  workflow_dispatch: #Can Run By Manually
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest #OS
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
