@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Get New Updates
         run: |
-          curl -o vmess.txt -LJO http://www.com/m.txt
+          curl -o vmess.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess"
       - name: Commit Changes
         run: |
           git config --global user.name "GitHub Action"
