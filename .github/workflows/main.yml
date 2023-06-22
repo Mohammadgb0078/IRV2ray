@@ -23,5 +23,5 @@ jobs:
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add vmess.txt
-          git commit -m "🚀 Servers Updated - $(date '+%Y-%m-%d %H:%M:%S')"
+          git commit -m "🚀 Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S')"
           git push
