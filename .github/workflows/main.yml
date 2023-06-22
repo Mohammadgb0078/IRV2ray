@@ -17,6 +17,7 @@ jobs:
           token: ${{ secrets.TOKEN }}
       - name: Get New Updates
         run: |
+        echo "🚀 Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S')"
           curl -o vmess.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess"
       - name: Commit Changes
         run: |
