@@ -1,4 +1,8 @@
 # IRV2ray
+The RGB text is as follows:
+Red: #FF0000
+Green: #00FF00
+Blue: #0000FF
 ## NODE Sources
 This project currently utilizes Telegram channels as the source of v2ray nodes.
 
