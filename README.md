@@ -1,8 +1,11 @@
 # IRV2ray
-The RGB text is as follows:
-Red: #FF0000
-Green: #00FF00
-Blue: #0000FF
+<span style="color: red;">سلام</span>
+<span style="color: orange;">سلام</span>
+<span style="color: yellow;">سلام</span>
+<span style="color: green;">سلام</span>
+<span style="color: blue;">سلام</span>
+<span style="color: indigo;">سلام</span>
+<span style="color: violet;">سلام</span>
 ## NODE Sources
 This project currently utilizes Telegram channels as the source of v2ray nodes.
 
