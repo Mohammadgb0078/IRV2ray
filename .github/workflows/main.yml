@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.TOKEN }}
       - name: Get New Updates
         run: |
           curl -o vmess.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess"
