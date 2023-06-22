@@ -16,13 +16,13 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Get New Updates
-      run: |
-      curl -o vmess.txt -LJO https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess
+    - name: Get New Updates
+    run: |
+curl -o vmess.txt -LJO https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess
       - name: Commit Changes
       run: |
-      git config --global user.name "GitHub Action"
-      git config --global user.email "action@github.com"
-      git add vmess.txt
-      git commit -m "🚀 Servers Updated - $(date '+%Y-%m-%d %H:%M:%S')"
-      git push
+git config --global user.name "GitHub Action"
+git config --global user.email "action@github.com"
+git add vmess.txt
+git commit -m "🚀 Servers Updated - $(date '+%Y-%m-%d %H:%M:%S')"
+git push
