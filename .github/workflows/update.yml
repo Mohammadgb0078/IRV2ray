@@ -2,10 +2,13 @@ name: Subscription Updater
 
 on:
   push:
-    branches:
-      - master
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
     schedule:
     - cron: "*/1 * * * *" # Every 3Minutes
+
+  workflow_dispatch:
 
 jobs:
   build:
