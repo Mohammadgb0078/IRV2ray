@@ -1,11 +1,5 @@
 # IRV2ray
-<span style="color: red;">سلام</span>
-<span style="color: orange;">سلام</span>
-<span style="color: yellow;">سلام</span>
-<span style="color: green;">سلام</span>
-<span style="color: blue;">سلام</span>
-<span style="color: indigo;">سلام</span>
-<span style="color: violet;">سلام</span>
+
 ## NODE Sources
 This project currently utilizes Telegram channels as the source of v2ray nodes.
 
@@ -35,3 +29,5 @@ Telegram Channels utilized in this Project:
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
+## Special Thanks
+Special Thanks to <b>[yebekhe](https://github.com/yebekhe)</b>
