@@ -1,29 +1,28 @@
-name: Update Mail File
+name: Subscription Updater
 
 on:
-  schedule:
-    - cron: "*/3 * * * *"
+  push:
+    branches:
+      - master
+    schedule:
+    - cron: "*/3 * * * *" # Every 3Minutes
 
 jobs:
-  update-mail:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout Repo
         uses: actions/checkout@v2
 
-      - name: Update Mail File
-        run: |
-          wget -O mail.txt https://github.com/yebekhe/TelegramV2rayCollector/raw/main/sub/vmess
+      - name: Get New Updates
+      run: |
+      curl -o vmess.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess"
           
       - name: Commit Changes
-        run: |
-          git config --global user.name "Your Name"
-          git config --global user.email "youremail@example.com"
-          git add mail.txt
-          git commit -m "Update mail.txt"
-          
-      - name: Push Changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.TOKEN }}
+      run: |
+      git config --global user.name "GitHub Action"
+      git config --global user.email "action@github.com"
+      git add vmess.txt
+      git commit -m "🚀 Servers Updated - $(date '+%Y-%m-%d %H:%M:%S')"
+      git push
