@@ -3,15 +3,12 @@ name: Subscription Updater
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
   schedule:
     - cron: "0 * * * *" # Every Hourly
-
-  workflow_dispatch: #Can Run By Manually
+    
 
 jobs:
-  update:
+  UpdateSub:
     runs-on: ubuntu-latest #OS
     steps:
       - name: Checkout Repo
