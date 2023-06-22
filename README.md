@@ -28,6 +28,6 @@ Telegram Channels utilized in this Project:
 
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Mohammadgb0078/IRV2ray/blob/main/LICENSE) file for details.
 ## Special Thanks
 Special Thanks to <b>[yebekhe](https://github.com/yebekhe)</b>
