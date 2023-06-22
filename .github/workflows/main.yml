@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
   schedule:
-    - cron: "*/22 * * * *" # Every 20Min
+    - cron: "*/30 * * * *" # Every 30Min
     
   #workflow_dispatch:
 
