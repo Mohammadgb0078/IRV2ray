@@ -6,6 +6,7 @@ on:
   schedule:
     - cron: "0 * * * *" # Every Hourly
     
+  workflow_dispatch:
 
 jobs:
   UpdateSub:
