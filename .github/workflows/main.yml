@@ -5,8 +5,8 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-    schedule:
-    - cron: "*/1 * * * *" # Every 3Minutes
+  schedule:
+    - cron: "*/1 * * * *" # Every 3 Minutes
 
   workflow_dispatch:
 
