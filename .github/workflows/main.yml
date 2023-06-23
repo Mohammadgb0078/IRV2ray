@@ -20,19 +20,10 @@ jobs:
         run: |
           curl -o vmess.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64"
           curl -o vless.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless_base64"
-      - name: Convert Date to Shamsi (Persian) Calendar
-        id: convert-date
-        uses: actions/github-script@v4
-        with:
-          script: |
-            const moment = require('jalali-moment');
-            const gregorianDate = new Date();
-            const shamsiDate = moment(gregorianDate).locale('fa').format('jYYYY-jMM-jDD HH:mm:ss');
-            console.log(shamsiDate);
       - name: Commit Changes
         run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add .
-          git commit -m "🚀Servers Updated - ${{ steps.convert-date.outputs.result }}"
+          git commit -m "🚀Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S') Asia/Tehran"
           git push
