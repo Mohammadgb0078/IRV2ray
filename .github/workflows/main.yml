@@ -4,13 +4,11 @@ on:
   push:
     branches: [ "main" ]
   schedule:
-    - cron: "*/122 * * * *" # Every 2hour
-    
-  #workflow_dispatch:
+    - cron: "0 */2 * * *" # Every 2 hours
 
 jobs:
   UpdateSub:
-    runs-on: ubuntu-latest #OS
+    runs-on: ubuntu-latest # OS
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
@@ -25,5 +23,5 @@ jobs:
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add .
-          git commit -m "🚀Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S') Asia/Tehran"
+          git commit -m "🚀 Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S') Asia/Tehran"
           git push
