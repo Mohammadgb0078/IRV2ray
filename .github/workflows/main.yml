@@ -18,8 +18,8 @@ jobs:
           token: ${{ secrets.TOKEN }}
       - name: Get New Updates
         run: |
-          curl -o vmess.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vmess_base64"
-          curl -o vless.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/vless_base64"
+          curl -o vmess.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64/vmess"
+          curl -o vless.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64/vless"
       - name: Commit Changes
         run: |
           git config --global user.name "GitHub Action"
