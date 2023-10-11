@@ -1,27 +1,20 @@
 name: Subscription Updater
 
 on:
-  push:
-    branches: [ "main" ]
   schedule:
-    - cron: "0 */2 * * *" # Every 2 hours
+    - cron: '0 */2 * * *'  # Run every 2 hours
 
 jobs:
-  UpdateSub:
-    runs-on: ubuntu-latest # OS
+  update-vmess:
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repo
+      - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.TOKEN }}
-      - name: Get New Updates
+
+      - name: Update vmess.txt
         run: |
-          curl -o vmess.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64/vmess"
-          curl -o vless.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64/vless"
-      - name: Commit Changes
-        run: |
-          git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git add .
+          curl -o vmess.txt https://google.com/raw/path/to/vmess.txt
+          git add vmess.txt
           git commit -m "🚀 Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S') Asia/Tehran"
           git push
