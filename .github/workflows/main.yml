@@ -17,6 +17,8 @@ jobs:
       - name: Update vmess.txt
         run: |
           curl -o vmess.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64/vmess"
+          git config --global user.email "action@github.com"
+          git config --global user.name "Github Actions"
           git add vmess.txt
           git commit -m "🚀 Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S') Asia/Tehran"
           git push
