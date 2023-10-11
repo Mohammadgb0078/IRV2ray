@@ -1,5 +1,5 @@
 # IranV2rayCollector Service
-A Simple Github Project Use Simple Github Action To Get Free V2ray Servers For Iranian People<br>[![Subscription Updater](https://github.com/Mohammadgb0078/IRV2ray/actions/workflows/main.yml/badge.svg)](https://github.com/Mohammadgb0078/IRV2ray/actions/workflows/main.yml)<br>if you see the Status Badge Show as Falling Don't Worry this is a bug and I don't know how to fix it 😂
+A Simple Github Project Use Simple Github Action To Get Free V2ray Servers For Iranian People<br>[![Subscription Updater](https://github.com/Mohammadgb0078/IRV2ray/actions/workflows/subupdater.yml/badge.svg)](https://github.com/Mohammadgb0078/IRV2ray/actions/workflows/subupdater.yml)<br>if you see the Status Badge Show as Falling Don't Worry this is a bug and I don't know how to fix it 😂
 ## NODE Sources
 This project currently utilizes Telegram channels as the source of v2ray nodes.
 
