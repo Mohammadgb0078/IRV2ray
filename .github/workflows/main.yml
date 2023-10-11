@@ -1,10 +1,10 @@
-name: Subscription Updater
+name: Subscription Update
 
 on:
   push:
     branches: [ "main" ]
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '*/60 * * * *'
 
   #workflow_dispatch:
 jobs:
@@ -12,14 +12,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Check The Code
         uses: actions/checkout@v2
-
-      - name: Update vmess.txt
+      - name: Get Files
         run: |
           curl -o vmess.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64/vmess"
+          curl -o vless.txt -LJO "https://raw.githubusercontent.com/yebekhe/TelegramV2rayCollector/main/sub/base64/vless"
+      - name: Push And Update Files
+        run: |
+          git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
-          git config --global user.name "Github Actions"
-          git add vmess.txt
-          git commit -m "🚀 Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S') Asia/Tehran"
+          git add .
+          git commit -m "🚀Servers Updated - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S') Asia/Tehran"
           git push
