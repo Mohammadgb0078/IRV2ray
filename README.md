@@ -31,3 +31,6 @@ Telegram Channels utilized in this Project:
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/Mohammadgb0078/IRV2ray/blob/main/LICENSE) file for details.
 ## Special Thanks
 Special Thanks to <b>[yebekhe](https://github.com/yebekhe)</b>
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=Mohammadgb0078/IRV2ray&type=Date)](https://star-history.com/#Mohammadgb0078/IRV2ray&Date)
