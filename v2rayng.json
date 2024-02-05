@@ -42,9 +42,9 @@
   "outbounds": [
     {
       "mux": {
-        "concurrency": 0,
+        "concurrency": 8,
         "enabled": true,
-        "xudpConcurrency": 0,
+        "xudpConcurrency": 8,
         "xudpProxyUDP443": "reject"
       },
       "protocol": "vless",
@@ -57,7 +57,7 @@
               {
                 "encryption": "none",
                 "flow": "",
-                "id": "KING",
+                "id": "4ebd9ce3-cb42-40d4-9e2e-149dd8d0015d",
                 "level": 8,
                 "security": "auto"
               }
@@ -77,7 +77,7 @@
         "network": "grpc",
         "security": "tls",
         "tlsSettings": {
-          "allowInsecure": true,
+          "allowInsecure": false,
           "alpn": [
             "h2"
           ],
