@@ -42,65 +42,57 @@
   },
   "outbounds": [
     {
-      "mux": {
-        "concurrency": 8,
-        "enabled": true,
-        "xudpConcurrency": 8,
-        "xudpProxyUDP443": "reject"
-      },
+      "tag": "proxy",
       "protocol": "vless",
       "settings": {
         "vnext": [
           {
-            "address": "npmjs.com",
-            "port": 443,
+            "address": "116.203.152.13",
+            "port": 6666,
             "users": [
               {
-                "encryption": "none",
-                "flow": "",
-                "id": "435aad7d-1a8e-4d13-bf3d-3ffe58b07cc9",
-                "level": 8,
-                "security": "auto"
+                "id": "f12805d6-1883-4bc8-8e09-4f08aa81e9a7",
+                "alterId": 0,
+                "email": "t@t.tt",
+                "security": "auto",
+                "encryption": "none"
               }
             ]
           }
         ]
       },
       "streamSettings": {
+        "network": "grpc",
+        "security": "tls",
+        "tlsSettings": {
+          "allowInsecure": true,
+          "serverName": "ttga.aecadmin.ir",
+          "fingerprint": "randomized",
+          "show": false
+        },
         "grpcSettings": {
-          "multiMode": false,
-          "serviceName": ""
+          "serviceName": "",
+          "multiMode": false
         },
         "sockopt": {
           "dialerProxy": "frag",
           "tcpNoDelay": true
-        },
-        "network": "grpc",
-        "security": "tls",
-        "tlsSettings": {
-          "allowInsecure": false,
-          "alpn": [
-            "h2"
-          ],
-          "fingerprint": "safari",
-          "publicKey": "",
-          "serverName": "nat.vpland.cloud",
-          "shortId": "",
-          "show": false,
-          "spiderX": ""
         }
       },
-      "tag": "proxy"
+      "mux": {
+        "enabled": false,
+        "concurrency": -1
+      }
     },
-     {
+    {
       "tag": "frag",
       "protocol": "freedom",
       "settings": {
         "domainStrategy": "AsIs",
         "fragment": {
           "packets": "tlshello",
-          "length": "10-30",
-          "interval": "10"
+          "length": "10-20",
+          "interval": "0"
         }
       },
       "streamSettings": {
