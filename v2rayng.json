@@ -47,11 +47,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "116.203.152.13",
-            "port": 6666,
+            "address": "npmjs.com",
+            "port": 443,
             "users": [
               {
-                "id": "f12805d6-1883-4bc8-8e09-4f08aa81e9a7",
+                "id": "6f1ed7f2-c006-4436-9770-f80b1dfa5afc",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto",
@@ -66,8 +66,8 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": true,
-          "serverName": "ttga.aecadmin.ir",
-          "fingerprint": "randomized",
+          "serverName": "digital.islamic-hijab.shop",
+          "fingerprint": "safari",
           "show": false
         },
         "grpcSettings": {
